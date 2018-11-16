@@ -1,4 +1,4 @@
-# https://github.com/plotly/dash-recipes/blob/master/mapbox-lasso.py
+# -*- coding: utf-8 -*-
 
 import os
 
@@ -35,7 +35,7 @@ defaultMetric = 'Bikes'
 # color scale for station availability
 scl = [[0, '#C65C2F'],[0.5, '#DCDCDC'],[1, '#4E8681']] # 0% = red, 50% = gray, 100% = green
 
-app = dash.Dash()
+app = dash.Dash(__name__)
 server = app.server
 
 app.layout = html.Div(
@@ -60,11 +60,12 @@ app.layout = html.Div(
 
     html.Div(
         id='dropdown-div',
-        className='two columns',
+        # className='two columns',
         children=[
         dcc.Dropdown(
             id='time-period-dropdown',
             # className='cb-dropdown',
+            className='two columns',
             options=[{'label': i, 'value': i} for i in timePeriods],
             value=defaultTime, # default selection
             clearable=False
@@ -72,7 +73,8 @@ app.layout = html.Div(
 
         dcc.Dropdown(
             id='metric-dropdown',
-            className='cb-dropdown',
+            # className='cb-dropdown',
+            className='two columns',
             options=[{'label': i, 'value': i} for i in metrics],
             value=defaultMetric, # default selection
             clearable=False
