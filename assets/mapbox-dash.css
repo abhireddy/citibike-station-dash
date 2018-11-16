@@ -1,0 +1,8 @@
+/* hide Dash menu bar */
+.modebar{
+      display: none !important;
+}
+
+#mapbox-graph {
+  height: 100%;
+}
