@@ -3,6 +3,23 @@
       display: none !important;
 }
 
-#mapbox-graph {
-  height: 100%;
+.main-title {
+  font-family: 'Montserrat', Helvetica;
+}
+
+.intro-text, .cb-dropdown {
+  font-family: 'Raleway', Helvetica;
+}
+
+/* dropdown styling */
+.cb-dropdown {
+  max-width: 25%;
+}
+
+#time-period-dropdown {
+   clear: none;
+}
+
+#metric-dropdown {
+   clear: none;
 }
