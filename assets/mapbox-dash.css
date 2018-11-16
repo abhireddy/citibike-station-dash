@@ -1,6 +1,10 @@
 /* hide Dash menu bar */
-.modebar{
+/* .modebar{
       display: none !important;
+} */
+
+#intro-and-map {
+  max-width: 800px;
 }
 
 .main-title {
@@ -16,10 +20,10 @@
   max-width: 25%;
 }
 
-#time-period-dropdown {
+/* #time-period-dropdown {
    clear: none;
 }
 
 #metric-dropdown {
    clear: none;
-}
+} */

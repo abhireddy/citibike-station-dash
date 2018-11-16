@@ -42,7 +42,7 @@ app.layout = html.Div(
     id='intro-and-map',
     children=[
     html.H1(
-        'Station Availability in the NYC Citi Bike Network',
+        'Citi Bike Station Availability',
         className='main-title'),
 
     html.P([
@@ -60,10 +60,11 @@ app.layout = html.Div(
 
     html.Div(
         id='dropdown-div',
+        className='two columns',
         children=[
         dcc.Dropdown(
             id='time-period-dropdown',
-            className='cb-dropdown',
+            # className='cb-dropdown',
             options=[{'label': i, 'value': i} for i in timePeriods],
             value=defaultTime, # default selection
             clearable=False
@@ -78,7 +79,11 @@ app.layout = html.Div(
         )]),
     html.Div(
         className="nine columns",
-        children=dcc.Graph(id='mapbox-graph')
+        children=dcc.Graph(
+            id='mapbox-graph',
+            config={
+                'displayModeBar': False
+        })
     )
 ], className="row")
 
