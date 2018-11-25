@@ -18,7 +18,7 @@ df['formatted_dock_uptime'] = df.dock_uptime.apply(lambda x: str(round(x*100)))
 
 # get list for time of day dropdown
 timePeriods = df.time_of_day.unique()
-defaultTime = 'Peak Weekday Mornings'
+defaultTime = 'Peak Weekday Mornings (7-10 AM)'
 
 # get list for metrics dropdown
 metricDict = {
@@ -40,11 +40,11 @@ server = app.server
 app.layout = html.Div(
     children=[
     html.H1(
-        'Citi Bike Station Availability',
+        'Mapping Citi Bike Availability',
         className='main-title'),
 
     html.P([
-        'An interactive map indicating how often each Citi Bike station had at least one bike or open dock available ',
+        'An interactive map indicating how often Citi Bike stations had at least one bike or open dock available ',
         'during periods of peak usage in September 2018. ',
         'This availability metric can be used to evaluate how well bikes are rebalanced across the network ',
         'to avoid unnecessary detours for riders.'
@@ -52,12 +52,12 @@ app.layout = html.Div(
 
     html.P([
         'This visualization was built in ',
-        html.A('Dash',href='https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503'),
+        html.A('Dash',href='https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503',target='_blank'),
         ' with mapping provided by Mapbox. ',
         'You can ',
-        html.A('read more',href='https://medium.com/@abhireddy/is-it-hard-to-find-a-citi-bike-or-is-it-just-me-b4d7cb9d1069'),
+        html.A('read more',href='https://medium.com/@abhireddy/is-it-hard-to-find-a-citi-bike-or-is-it-just-me-b4d7cb9d1069',target='_blank'),
         ' about this project or view the ',
-        html.A('source code',href='#'),
+        html.A('source code',href='https://github.com/abhireddy/citibike-station-dash',target='_blank'),
         '.'],
         className='intro-text'),
 
