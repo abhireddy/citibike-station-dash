@@ -1,29 +1,23 @@
-/* hide Dash menu bar */
-/* .modebar{
-      display: none !important;
-} */
-
-#intro-and-map {
-  max-width: 800px;
-}
-
 .main-title {
   font-family: 'Montserrat', Helvetica;
 }
 
-.intro-text, .cb-dropdown {
+.intro-text, #dropdown-div {
   font-family: 'Raleway', Helvetica;
 }
 
-/* dropdown styling */
-.cb-dropdown {
-  max-width: 25%;
-}
-
-/* #time-period-dropdown {
-   clear: none;
-}
-
-#metric-dropdown {
-   clear: none;
+/* .intro-text {
+  max-width: 800px;
 } */
+
+#_dash-app-content {
+  max-width: 800px;
+}
+
+#time-period-dropdown, #metric-dropdown {
+  padding-bottom: 20px;
+}
+
+.dropdown-label {
+  font-weight: bold;
+}
