@@ -61,6 +61,12 @@ app.layout = html.Div(
         '.'],
         className='intro-text'),
 
+    html.P([
+        'If you\'re having trouble loading the visualization, ' ,
+        'please try disabling your ad-blocker.'
+        ],
+        className='intro-text'),
+
     html.Div(
         id='dropdown-div',
         className="row",
