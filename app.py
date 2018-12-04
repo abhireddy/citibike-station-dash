@@ -63,7 +63,7 @@ app.layout = html.Div(
 
     html.P([
         'If you\'re having trouble loading the visualization, ' ,
-        'please try disabling your ad-blocker.'
+        'please try disabling your ad blocker.'
         ],
         className='intro-text'),
 
